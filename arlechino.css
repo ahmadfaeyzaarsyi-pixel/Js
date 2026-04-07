@@ -1,0 +1,145 @@
+
+    
+.hiden{
+opacity: 0;
+pointer-events: none;
+}
+#opened {
+width: 300px;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+transition: opacity 0.8s ease-in-out;
+border-radius: 10%;}
+#photo1 {
+    width: 300px;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+transition: opacity 0.8s ease-in-out;
+border-color: aqua;
+border-radius: 10%;
+}
+#photo2{
+    width: 300px;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+transition: opacity 0.8s ease-in-out;
+border-color: aqua;
+border-radius: 10%;
+}
+body {
+height: 100px;
+    background-image: url("top-view-beautiful-birthday-concept.jpg");
+background-size: cover
+}
+
+button {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: burlywood;
+    border-radius: 25px; 
+    font-style: oblique;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.album{
+    text-align: left;
+}
+.write{
+    font-style: oblique;
+}
+/* Wadah untuk menampung semua hati */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Supaya ada di belakang tombol dan tulisan */
+    pointer-events: none; /* Supaya gak ganggu klik-klik tombol */
+}
+
+/* Gaya dasar simbol hati */
+.heart {
+    position: absolute;
+    bottom: -50px; /* Mulai dari luar layar bawah */
+    font-size: 20px;
+    opacity: 0;
+    animation: float 5s linear infinite; /* Panggil animasi 'float' */
+}
+
+/* Animasi Inti: Dari bawah ke atas */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg); /* Terbang ke atas langit */
+        opacity: 0; /* Menghilang pelan-pelan di atas */
+    }
+}
+
+/* Kasih variasi posisi dan delay biar nggak barengan munculnya */
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 2s; font-size: 30px; }
+.heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 1s; font-size: 25px; }
+.heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+#musicbutton{
+    border-radius: 0px;
+    width: 500px;
+    background-color: lightblue;
+}
+.arle{
+    margin-right: 1000px;
+    object-fit: cover;
+    
+}
+.memory-section {
+    margin-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Biar kalau layar sempit, fotonya turun ke bawah */
+    gap: 20px;
+}
+
+.polaroid {
+    background-color: white;
+    padding: 15px 15px 40px 15px; /* Putih di bawah lebih lebar buat teks */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    width: 200px;
+    transition: 0.5s;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Biar foto nggak gepeng */
+}
+
+.polaroid p {
+    color: #333;
+    font-family: 'Courier New', Courier, monospace; /* Gaya tulisan mesin ketik */
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Bikin Miring-miring secara otomatis */
+.polaroid:nth-child(even) { transform: rotate(5deg); }
+.polaroid:nth-child(odd) { transform: rotate(-5deg); }
+
+/* Efek pas kursor nempel: Foto jadi lurus dan membesar */
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.1);
+    z-index: 10;
+}

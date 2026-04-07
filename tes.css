@@ -1,0 +1,18 @@
+.cake {
+border:50px solid;
+color:blue;
+}
+.cake1 {
+border:10px dashed;
+color:red;
+.cake2 {
+width: 150px;
+height: 150px;
+object-fit: cover;
+border-radius: 50%
+
+body {
+background: linear-gradient(to bottom right, pink, purple):
+height: 100vh;
+margin: 0;
+}
